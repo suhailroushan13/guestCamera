@@ -1,0 +1,33 @@
+{
+  "name": "guestcamera",
+  "version": "1.0.0",
+  "description": "An Application which informs Desk User That a Guest was visited there Desk",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suhailroushan13/guestCamera.git"
+  },
+  "keywords": [
+    "guest",
+    "camera",
+    "user",
+    "desk",
+    "notification"
+  ],
+  "author": "Suhail Roushan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/suhailroushan13/guestCamera/issues"
+  },
+  "homepage": "https://github.com/suhailroushan13/guestCamera#readme",
+  "dependencies": {
+    "config": "^3.3.9",
+    "express": "^4.18.2",
+    "node-webcam": "^0.8.2",
+    "nodemailer": "^6.9.4"
+  }
+}

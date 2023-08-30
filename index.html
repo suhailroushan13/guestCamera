@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desk App</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0e0e0;
+        }
+
+        .neumorphic {
+            width: 100px;
+            margin: 140px;
+            height: 100px;
+            margin-top: -100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #e0e0e0;
+            border-radius: 10px;
+            box-shadow: -5px -5px 10px #ffffff, 5px 5px 10px #aeaec0;
+        }
+
+        .neumorphic img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        body {
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background-color: #e0e0e0;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .neumorphic {
+            width: 1350px;
+            height: 350px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #e0e0e0;
+            border-radius: 15px;
+            box-shadow: 10px 10px 20px #bebebe, -10px -10px 20px #ffffff;
+        }
+
+        img {
+            max-width: 80%;
+            max-height: 80%;
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px #bebebe, -5px -5px 10px #ffffff;
+        }
+
+        #countdown {
+            color: black;
+            font-size: 60px;
+            margin: 0;
+            text-align: center;
+        }
+
+        /* For mobile devices */
+        @media only screen and (max-width: 867px) {
+            /* Your styles here */
+
+            #countdown {
+                color: black;
+                font-size: 10px;
+                margin: 0;
+                text-align: center;
+            }
+
+            img {
+                max-width: 40%;
+                max-height: 40%;
+                border-radius: 10px;
+                box-shadow: 5px 5px 10px #bebebe, -5px -5px 10px #ffffff;
+            }
+
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #e0e0e0;
+            }
+
+            .neumorphic {
+                width: 200px;
+                height: 200px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                /* padding: 30px; */
+                /* margin: 40px; */
+                background: #e0e0e0;
+                border-radius: 10px;
+                box-shadow: -5px -5px 10px #ffffff, 5px 5px 10px #aeaec0;
+            }
+
+            .neumorphic img {
+                max-width: 100%;
+                max-height: 100%;
+                /* padding: 30px; */
+                /* margin: 40px; */
+            }
+
+            body {
+                display: flex;
+                height: 100vh;
+                padding: 30px;
+                /* margin: 40px; */
+                justify-content: center;
+                align-items: center;
+                background-color: #e0e0e0;
+                margin: 0;
+                font-family: Arial, sans-serif;
+            }
+
+            .neumorphic {
+                width: 1350px;
+                height: 350px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: #e0e0e0;
+                border-radius: 15px;
+                box-shadow: 10px 10px 20px #bebebe, -10px -10px 20px #ffffff;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="neumorphic">
+        <div id="countdown">5</div>
+    </div>
+
+    <script>
+        let countdownNumber = 5;
+        const countdownElement = document.getElementById('countdown');
+
+        const countdownInterval = setInterval(() => {
+            countdownNumber--;
+            countdownElement.textContent = countdownNumber;
+
+            if (countdownNumber <= 0) {
+                clearInterval(countdownInterval);
+                countdownElement.textContent = "Time to see the webcam!";
+            }
+        }, 2000);
+
+
+    </script>
+
+</body>
+
+</html>
